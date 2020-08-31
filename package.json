@@ -1,5 +1,5 @@
 {
-  "name": "remnote-inspector",
+  "name": "remnote-inspect",
   "version": "0.0.1",
   "description": "RemNote plugin to display the data behind a Rem.",
   "author": "Hannes Frank <frankhannes@gmail.com>",
@@ -8,12 +8,14 @@
     "test": "jest",
     "test-watch": "jest --watch",
     "dev": "parcel serve index.html",
-    "build": "parcel build index.html --public-url /remnote-inspect/ --dist-dir docs/"
+    "build": "parcel build index.html --public-url /remnote-inspect/",
+    "deploy": "rm -rf dist/ && npm run build && gh-pages -d dist"
   },
   "browserslist": [
     "last 2 Chrome versions"
   ],
   "devDependencies": {
+    "gh-pages": "^3.1.0",
     "parcel": "^2.0.0-beta.1"
   }
 }

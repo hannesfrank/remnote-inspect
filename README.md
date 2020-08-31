@@ -2,6 +2,8 @@
 
 Inspect the current Rem.
 
+<img src="demo.png" alt="demo" width="400px">
+
 ## Installation
 
 Add this URL to your [RemNote plugins](https://www.remnote.io/plugins):
@@ -19,9 +21,9 @@ Add this URL to your [RemNote plugins](https://www.remnote.io/plugins):
 
 - Press the shortcut in any Rem.
 - You can click on labels to fold them.
-- Use `Esc` to exit.
+- Use `Esc` to close the popup.
 
-The Objects are also printed to the `console`.
+Everything is also printed to the `console`.
 
 ## Development
 
@@ -40,12 +42,13 @@ yarn dev
 ### Deployment
 
 ```sh
-git checkout gh-pages
-rm -r docs
-yarn build
-git add docs
-git commit -m "Release"
-git push origin gh-pages
+yarn deloy
 ```
 
-- [ ] Make github action
+## Roadmap
+
+- Click on rem ids to further explore the tree
+  - This might be easier with `prettyprint` than `nodedump`
+- Custom transforms
+  - Timestamp to datetime
+  - Show name of rem in addition to id
