@@ -1,0 +1,19 @@
+{
+  "name": "remnote-inspector",
+  "version": "0.0.1",
+  "description": "RemNote plugin to display the data behind a Rem.",
+  "author": "Hannes Frank <frankhannes@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "dev": "parcel serve index.html",
+    "build": "parcel build index.html --public-url /remnote-inspect/ --dist-dir docs/"
+  },
+  "browserslist": [
+    "last 2 Chrome versions"
+  ],
+  "devDependencies": {
+    "parcel": "^2.0.0-beta.1"
+  }
+}
