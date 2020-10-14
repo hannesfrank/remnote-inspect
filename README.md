@@ -52,3 +52,41 @@ yarn deloy
 - Custom transforms
   - Timestamp to datetime
   - Show name of rem in addition to id
+
+## About RemNote's datastructures
+
+- `name`: rem text before `::`
+- `content`: rem text after `::`
+
+`name` and `content` are list of strings and rich text elements. There are the following types:
+
+```js
+{
+  ANNOTATION: 'n',
+  AUDIO: 'a',
+  CODE: 'o',
+  DRAWING: 'r',
+  GLOBAL_NAME: 'g',
+  IMAGE: 'i',
+  PLUGIN: 'p',
+  REM: 'q', // Rem Reference
+  TEXT: 'm'
+}
+```
+
+In case of `m` (`TEXT`), a one of the following keys is set to `true` to indicate a type of formatting:
+
+```js
+{
+  BOLD: "b",
+  CLOZE: "cId",
+  HIDDEN_CLOZE: "hiddenCloze",
+  HIGHLIGHT: "h",
+  ITALIC: "l",
+  LATEX: "x",
+  LINK: "url",
+  QUOTE: "q",
+  REVEALED_CLOZE: "revealedCloze",
+  UNDERLINE: "u",
+}
+```
